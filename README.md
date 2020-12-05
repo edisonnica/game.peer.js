@@ -29,7 +29,7 @@ Two phase disclosure.
 In a game like Battleship, users will create their own boards, that they will be used to play against the opponent. Without a third party that holds the initial boards, there is no way to know if an unscrupulous player will move their ships during game.
 
 #### Proposed solution
-Before the game starts, both players will release the encrypted or securely hashed board state. At the end of the game (at least) the winner will have release the full board state, which the other player can check against each move and the initial hashed/encrypted state.
+Before the game starts, both players will release the encrypted or securely hashed board state. At the end of the game (at least) the winner will have to release the full board state, which the other player can check against each move and the initial hashed/encrypted state.
 
 ### Distributing hidden cards
 In a game like Poker or Blackjack, most of the cards are hidden to all players, and some players have cards, that are known only to them
