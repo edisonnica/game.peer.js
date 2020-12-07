@@ -11,6 +11,8 @@ We suggest a Serverless, Zero Trust, Distrubuted solution, that uses SHA256 and/
 - First, for players private moves, the players will first present their signed state/moves, and once all players shared their signed state/moves, they provide the actual state/moves.
 - Second, for shared private state, e.g. like a deck of card, all players will contribute at encrypting and building the state.
 
+This solution does not require a server, each player will cooperate with the rest of players. Poker and Blackjack are perfect candidates for an implementation, since it will remove from the system the need of a server, which, especially for Blackjack, could malitiosly distribute bad cards, with no way for players to enforce no-server-chating. 
+
 ## Classes of games targeted
 We are targeting a few classes of games:
  - Games with initial setup that is hidden to some/most players (e.g. Poker, Battleships)
