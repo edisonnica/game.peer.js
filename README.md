@@ -6,6 +6,11 @@ game.peer.js is a Peer to Peer (#P2P), Serverless, Zero Trust, Distributed, Coop
 ## Motivation
 Wen playing a game online, is the game server to be trusted? How do we know the server does not cheat? While dealing bad card might not be a problem in a game like Uno, bad cards distributed by a malicious server can have material implications for Pocker or Blackjack players.
 
+## Solution
+We suggest a Serverless, Zero Trust, Distrubuted solution, that uses SHA256 and/or Cryptography to manage games. There are 2 building block ideas to ensure a fair, competitive game:
+- First, for players private moves, the players will first present their signed state/moves, and once all players shared their signed state/moves, they provide the actual state/moves.
+- Second, for shared private state, e.g. like a deck of card, all players will contribute at encrypting and building the state.
+
 ## Classes of games targeted
 We are targeting a few classes of games:
  - Games with initial setup that is hidden to some/most players (e.g. Poker, Battleships)
@@ -46,3 +51,6 @@ Unwrapping envelopes: each player will (publicly) ask the player that wrapped th
 For the cards that are placed on the board, visible to everyone, everyone will distribute the secrets to everyone, according to the marking on the envelope.
 
 At the end of the game, all players must disclose the initial random seed/numbers, and each player can check the initial signature/hash, and the replay the shuffling and the game operations, ensuring that no cheating took place.
+
+## Posible implementation
+Using peerjs, we can create standard classes, like InitialState, Move, Deck, ... that will internally manage the communication protocol between player, along with ensuring no cheating.
