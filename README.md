@@ -4,7 +4,7 @@
 game.peer.js is a Peer to Peer (#P2P), Serverless, Zero Trust, Distributed, Cooperative, Javascript Game Framework.
 
 ## Motivation
-Wen playing a game online, is the game server to be trusted? How do we know the server does not cheat? While dealing bad card might not be a problem in a game like Uno, bad cards distributed by a malicious server can have material implications for Pocker or Blackjack players.
+When playing a game online, is the game server to be trusted? How do we know the server does not cheat? While dealing bad card might not be a problem in a game like Uno, bad cards distributed by a malicious server can have material implications for Pocker or Blackjack players.
 
 ## Solution
 We suggest a Serverless, Zero Trust, Distrubuted solution, that uses SHA256 and/or Cryptography to manage games. There are 2 building block ideas to ensure a fair, competitive game:
@@ -52,7 +52,10 @@ Unwrapping envelopes: each player will (publicly) ask the player that wrapped th
 
 For the cards that are placed on the board, visible to everyone, everyone will distribute the secrets to everyone, according to the marking on the envelope.
 
-At the end of the game, all players must disclose the initial random seed/numbers, and each player can check the initial signature/hash, and the replay the shuffling and the game operations, ensuring that no cheating took place.
+At the end of the game, all players must disclose the initial random seed/numbers, and each player can check the initial signature/hash, and replay the shuffling along with the game operations, ensuring that no cheating took place.
 
 ## Posible implementation
-Using peerjs, we can create standard classes, like InitialState, Move, Deck, ... that will internally manage the communication protocol between player, along with ensuring no cheating.
+Using peerjs, we can create standard classes, like InitialState, Move, Deck, ... that will internally manage the communication protocol between players, along with ensuring no cheating.
+
+## Playing for Money
+An Escrow Service, which could be the server delivering the Web App, but that is not necessary, will manage the money on the table. At the end, the winner(s) will share the full log of the game, and they will receive the Money, minus the Escrow fee. At each move, the players will provide proof of escrow, e.g. a signed token or somethign similar, to prove they put money on the table.
