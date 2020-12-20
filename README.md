@@ -54,7 +54,7 @@ For the cards that are placed on the board, visible to everyone, everyone will d
 
 At the end of the game, all players must disclose the initial random seed/numbers, and each player can check the initial signature/hash, and replay the shuffling along with the game operations, ensuring that no cheating took place.
 
-One  issue is that the first player, that shuffled and encoded the orifinal deck, when is asked about a key, could know who has that card (TBD)
+One  issue is that the first player (that shuffled and encoded the original deck) when is asked about a key, could know whay player has that card, this will produce some data disclosure we do not want:
 - One possible fix, is to have a passive rotating player, that will be the first player, and it would not actually play.
 - Another way is to introduce a random player, that does not play, and only does the initial shuffling
 - Another way to introduce a gateway/anonymous proxy for asking for the key
