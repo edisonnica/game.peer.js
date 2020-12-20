@@ -4,7 +4,7 @@
 game.peer.js is a Peer to Peer (#P2P), Serverless, Zero Trust, Distributed, Cooperative, Javascript Game Framework.
 
 ## Motivation
-When playing a game online, is the game server to be trusted? How do we know the server does not cheat? While dealing bad card might not be a problem in a game like Uno, bad cards distributed by a malicious server can have material implications for Pocker or Blackjack players.
+When playing a game online, is the game server to be trusted? How do we know the server does not cheat? While dealing bad card might not be a problem in a game like Uno, bad cards distributed by a malicious server can have material implications for Poker or Blackjack players.
 
 ## Solution
 We suggest a Serverless, Zero Trust, Distrubuted solution, that uses SHA256 and/or Cryptography to manage games. There are 2 building block ideas to ensure a fair, competitive game:
